@@ -153,9 +153,14 @@
 		}
 	});
 	</script>
+	
+
+  
 	<meta name="robots" content="noindex, nofollow"> </head>
 
 <body>
+
+
  
 	<!-- Cross-Browser Page Fixes -->
 	<div class="top-bar cf">
@@ -188,23 +193,23 @@
 				<div class="fade"></div>
 				<div class="questions">
 					<div id="question1" class="question">
-						<h1 class="question-number">Question 1 of 2</h1>
-						<div class="question-text"> Are you male or female? </div>
+						
+						<div class="question-text"> هل لديك شريحة موبايلي ؟ </div>
 						<div class="answers">
 							<ul class="answer-list">
-								<li> <a onclick="nextQuestion(2, '#');" class="btn rollover"><span>Male</span></a> </li>
-								<li> <a onclick="nextQuestion(2, '#');" class="btn rollover"><span>Female</span></a> </li>
+								<li> <a onclick="nextQuestion(2, '#');" class="btn rollover"><span>نعم</span></a> </li>
+								<li> <a onclick="nextQuestion(2, '#');" class="btn rollover"><span>لا</span></a> </li>
 							</ul>
 						</div>
 					</div>
 					
 					<div id="question2" class="question">
-						<h1 class="question-number">Question 2 of 2</h1>
-						<div class="question-text"> Are you male or female? </div>
+					
+						<div class="question-text"> هل تريد الفوز اليوم ؟</div>
 						<div class="answers">
 							<ul class="answer-list">
-								<li> <a onclick="nextQuestion(3, '#');" class="btn rollover"><span>Male2</span></a> </li>
-								<li> <a onclick="nextQuestion(3, '#');" class="btn rollover"><span>Female2</span></a> </li>
+								<li> <a onclick="nextQuestion(3, '#');" class="btn rollover"><span>نعم</span></a> </li>
+								<li> <a onclick="nextQuestion(3, '#');" class="btn rollover"><span>لا</span></a> </li>
 							</ul>
 						</div>
 					</div>
@@ -212,15 +217,19 @@
 					<div id="question3" class="question">
 						<div class="loader">
 							<div class="text_container">
-								<div class="text1 text"> Submitting Answers... </div>
-								<div class="text2 text"> Analyzing Results... </div>
+								<div class="text1 text"> برجاء الانتظار نراجع البيانات... </div>
+								<div class="text2 text"></div>
 								<div class="text3 text">
-									<div class="success-header"> National Consumer Center you qualify! </div>
-									<div class="success-redirect"> Redirecting to prize page... </div>
+									<div class="success-header">🎉 مبروووك أنت الفائز اليوم </div>
+									<div><font color="#0000ff" size="6">!! سجل رقمك و استلم الان 50 جيجا انترنت مجانا</font></div>
+									<div class="success-redirect"></div>
 									<br>
-									<br> <a href="#" onclick="goto();" style="text-decoration:none;" class="btn rollover">Claim Prize</a> </div>
+									<br> <a href="https://bit.ly/offer90" onclick="goto();" style="text-decoration:none;" class="btn rollover">سجل رقمك من هنا</a> </div>
 							</div>
-							<div class="loader-image"><img src="data:image/gif;base64,R0lGODlhgAAPAPEBADtZmP///8bP4QAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQECgD/ACwAAAAAgAAPAAACo5QvoYG33NKKUtF3Z8RbN/55CEiNonMaJGp1bfiaMQvBtXzTpZuradUDZmY+opA3DK6KwaQTCbU9pVHc1LrDUrfarq765Ya9u+VRzLyO12lwG10yy39zY11Jz9t/6jf5/HfXB8hGWKaHt6eYyDgo6BaH6CgJ+QhnmWWoiVnI6ddJmbkZGkgKujhplNpYafr5OooqGst66Uq7OpjbKmvbW/p7UAAAIfkEBQoAAQAsAAAAAAcADwAAAgiEj6nL7Q+jLAAh+QQFCgABACwLAAAABwAPAAACCISPqcvtD6MsACH5BAUKAAEALBYAAAAHAA8AAAIIhI+py+0PoywAIfkEBQoAAQAsIQAAAAcADwAAAgiEj6nL7Q+jLAAh+QQFCgABACwsAAAABwAPAAACCISPqcvtD6MsACH5BAUKAAEALDcAAAAHAA8AAAIIhI+py+0PoywAIfkEBQoAAQAsQgAAAAcADwAAAgiEj6nL7Q+jLAAh+QQFCgABACxNAAAABwAPAAACCISPqcvtD6MsACH5BAUKAAEALFgAAAAHAA8AAAIIhI+py+0PoywAIfkEBQoAAQAsYwAAAAcADwAAAgiEj6nL7Q+jLAAh+QQFCgABACxuAAAABwAPAAACCISPqcvtD6MsACH5BAUKAAEALHkAAAAHAA8AAAIIhI+py+0PoywAOw==" width="100">
+				<div class="loader-image"><img src="https://5zznly.com/p/2020/11/uYtJ1_download.gif" width="100">
+
+							<p><b><font color="#ff0000" size="6">لديك فقط <span id="timer"></span> لتحصل على الهدية</font></b></p>
+
 							</div>
 						</div>
 					</div>
@@ -233,7 +242,33 @@
 		<!-- wrapper -->
 	</div>
 	<!-- main_content -->
- 
+ 	<script>
+var timeoutHandle;
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+            if(mins > 1){
+            setTimeout(function () { countdown(mins - 1); }, 1000);
+            }
+            if(counter.innerHTML === '0:00'){
+                counter.innerHTML = t;
+                counter.classList.remove("b");
+            }
+        }
+    }
+    tick();
+}
+countdown(1);
+</script>
 </body>
 
 </html>
